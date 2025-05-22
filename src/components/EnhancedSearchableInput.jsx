@@ -650,10 +650,30 @@ function EnhancedSearchableInput({ step, value, onChange, onSelect }) {
     return () => clearTimeout(timeoutId);
   }, [searchQuery, step]);
 
-  const handleInputChange = (e) => {
-    const query = e.target.value;
-    setSearchQuery(query);
-    onChange(e);
+//   const handleInputChange = (e) => {
+//     const query = e.target.value;
+//     setSearchQuery(query);
+//     onChange(e);
+//     setShowDropdown(true);
+//     setSelectedIndex(-1);
+//   };
+const handleInputChange = (e) => {
+    const rawValue = e.target.value;
+    // Only allow letters, spaces, and common name characters like apostrophes, hyphens, and dots
+    const filteredValue = rawValue.replace(/[^a-zA-Z\s\-'.]/g, '');
+    
+    setSearchQuery(filteredValue);
+    
+    // Create a new event object with the filtered value
+    const filteredEvent = {
+      ...e,
+      target: {
+        ...e.target,
+        value: filteredValue
+      }
+    };
+    
+    onChange(filteredEvent);
     setShowDropdown(true);
     setSelectedIndex(-1);
   };
