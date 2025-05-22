@@ -321,12 +321,12 @@ function PredictionResults({ result, formData, onWhatIfAnalysis, onReset }) {
             
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 items-center">
-              <button
+              {/* <button
                 className="w-full sm:w-auto bg-gradient-to-r from-pink-500 to-rose-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-600 hover:to-rose-600 transition-all duration-200 transform hover:scale-105 shadow-lg"
                 onClick={onWhatIfAnalysis}
               >
                 🔬 Run What-If Analysis
-              </button>
+              </button> */}
               <button
                 className="w-full sm:w-auto bg-gray-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-200"
                 onClick={onReset}

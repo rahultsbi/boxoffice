@@ -3657,7 +3657,7 @@ function App() {
           <QuickPreview formData={formData} steps={steps} />
 
           {/* What-If Button */}
-          {Object.keys(formData).length === steps.length && (
+          {/* {Object.keys(formData).length === steps.length && (
             <div className="text-center">
               <button
                 className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-pink-600 hover:to-rose-600 transition-all duration-200 transform hover:scale-105"
@@ -3666,7 +3666,7 @@ function App() {
                 🔬 What-If Analysis
               </button>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>
