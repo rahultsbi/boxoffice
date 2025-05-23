@@ -203,7 +203,7 @@ function UpcomingMovieSearch({ onMovieSelect, onClose }) {
 
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:8000/search/upcoming-movies?q=${encodeURIComponent(query)}&limit=10`);
+      const response = await fetch(`https://box-office-tool-backend.onrender.com/search/upcoming-movies?q=${encodeURIComponent(query)}&limit=10`);
       if (response.ok) {
         const data = await response.json();
         setSearchResults(data.results || []);
@@ -219,7 +219,7 @@ function UpcomingMovieSearch({ onMovieSelect, onClose }) {
   const getMovieDetails = async (movieId) => {
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:8000/movie-details/${movieId}`);
+      const response = await fetch(`https://box-office-tool-backend.onrender.com/movie-details/${movieId}`);
       if (response.ok) {
         const data = await response.json();
         setMovieDetails(data);

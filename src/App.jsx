@@ -3461,7 +3461,7 @@ function App() {
         Category: formData.Category || "None"
       };
 
-      const response = await fetch('http://localhost:8000/predict-performance', {
+      const response = await fetch('https://box-office-tool-backend.onrender.com/predict-performance-enhanced', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
