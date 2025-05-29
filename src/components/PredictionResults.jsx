@@ -1,166 +1,3 @@
-// // components/PredictionResults.jsx
-
-// function PredictionResults({ result, formData, onWhatIfAnalysis, onReset }) {
-//   return (
-//     <div className="app-container">
-//       <div className="result-container">
-//         <div className="result-card">
-//           <div className="result-header">
-//             <h3 className="result-title">🎯 Box Office Prediction</h3>
-//             <p className="result-subtitle">Based on real TMDB performance data</p>
-            
-//             <div className="prediction-grid">
-//               <div className="prediction-card weekend">
-//                 <p className="prediction-label">Opening Weekend</p>
-//                 <p className="prediction-value">₹{result.weekend} Cr</p>
-//                 <p className="prediction-note">First 3 days</p>
-//               </div>
-//               <div className="prediction-card total">
-//                 <p className="prediction-label">Lifetime Collection</p>
-//                 <p className="prediction-value">₹{result.total} Cr</p>
-//                 <p className="prediction-note">Total box office</p>
-//               </div>
-//             </div>
-            
-//             {result.confidence && (
-//               <div className="confidence-card">
-//                 <p className="confidence-label">Prediction Confidence</p>
-//                 <div className="confidence-content">
-//                   <p className="confidence-value">{result.confidence}%</p>
-//                   <div className="confidence-bar-container">
-//                     <div className="confidence-bar">
-//                       <div 
-//                         className="confidence-fill"
-//                         style={{ width: `${result.confidence}%` }}
-//                       ></div>
-//                     </div>
-//                   </div>
-//                   <p className="confidence-note">
-//                     {result.confidence >= 85 ? "High confidence" :
-//                      result.confidence >= 70 ? "Good confidence" :
-//                      "Moderate confidence"}
-//                   </p>
-//                 </div>
-//               </div>
-//             )}
-//           </div>
-          
-//           <div className="details-grid">
-//             <div className="details-card cast-crew">
-//               <h4 className="details-title">🎭 Your Movie Cast & Crew</h4>
-//               {Object.entries(formData).map(([key, value]) => (
-//                 <div key={key} className="detail-row">
-//                   <span className="detail-key">{key}:</span>
-//                   <span className="detail-value">{value}</span>
-//                 </div>
-//               ))}
-//             </div>
-
-//             {result.breakdown && (
-//               <div className="details-card analysis">
-//                 <h4 className="details-title">📊 TMDB Analysis Breakdown</h4>
-                
-//                 {/* Show TMDB scores */}
-//                 {result.breakdown.director_performance_score && (
-//                   <div className="detail-row">
-//                     <span className="detail-key">Director TMDB Score:</span>
-//                     <span className="detail-value">{result.breakdown.director_performance_score}/10</span>
-//                   </div>
-//                 )}
-                
-//                 {result.breakdown.cast_performance_scores && (
-//                   <div className="detail-row">
-//                     <span className="detail-key">Cast TMDB Scores:</span>
-//                     <span className="detail-value">
-//                       {result.breakdown.cast_performance_scores.map(score => `${score}/10`).join(', ')}
-//                     </span>
-//                   </div>
-//                 )}
-                
-//                 {result.breakdown.music_director_performance_score && (
-//                   <div className="detail-row">
-//                     <span className="detail-key">Music Director TMDB Score:</span>
-//                     <span className="detail-value">{result.breakdown.music_director_performance_score}/10</span>
-//                   </div>
-//                 )}
-
-//                 {/* Show contributions */}
-//                 {result.breakdown.director_contribution && (
-//                   <div className="detail-row">
-//                     <span className="detail-key">Director Contribution:</span>
-//                     <span className="detail-value">+₹{result.breakdown.director_contribution} Cr</span>
-//                   </div>
-//                 )}
-                
-//                 {result.breakdown.cast_contribution && (
-//                   <div className="detail-row">
-//                     <span className="detail-key">Cast Contribution:</span>
-//                     <span className="detail-value">+₹{result.breakdown.cast_contribution} Cr</span>
-//                   </div>
-//                 )}
-
-//                 {result.breakdown.genre_contribution && (
-//                   <div className="detail-row">
-//                     <span className="detail-key">Genre Contribution:</span>
-//                     <span className="detail-value">+₹{result.breakdown.genre_contribution} Cr</span>
-//                   </div>
-//                 )}
-                
-//                 {result.breakdown.category_bonus && (
-//                   <div className="detail-row">
-//                     <span className="detail-key">Category Bonus:</span>
-//                     <span className="detail-value">+₹{result.breakdown.category_bonus} Cr</span>
-//                   </div>
-//                 )}
-
-//                 {result.breakdown.weights_used && (
-//                   <div className="detail-row">
-//                     <span className="detail-key">Calculation Method:</span>
-//                     <span className="detail-value">Weighted TMDB Performance Data</span>
-//                   </div>
-//                 )}
-                
-//                 {result.dataSource && (
-//                   <div className="data-source">
-//                     <span className="data-source-text">
-//                       📡 Data Source: {result.dataSource}
-//                     </span>
-//                   </div>
-//                 )}
-//               </div>
-//             )}
-//           </div>
-          
-//           <div className="action-section">
-//             <div className="action-buttons">
-//               <button
-//                 className="what-if-button"
-//                 onClick={onWhatIfAnalysis}
-//               >
-//                 🔬 Run What-If Analysis
-//               </button>
-//               <button
-//                 className="reset-button"
-//                 onClick={onReset}
-//               >
-//                 🎬 Predict Another Movie
-//               </button>
-//             </div>
-            
-//             <div className="action-info">
-//               <p className="action-note">
-//                 💡 All ratings calculated from real TMDB box office performance data
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default PredictionResults;
-// components/PredictionResults.jsx - TAILWIND VERSION
 
 function PredictionResults({ result, formData, onWhatIfAnalysis, onReset }) {
   return (
@@ -170,7 +7,7 @@ function PredictionResults({ result, formData, onWhatIfAnalysis, onReset }) {
           {/* Header */}
           <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-6">
             <h3 className="text-2xl font-bold mb-2">🎯 Box Office Prediction</h3>
-            <p className="text-green-100">Based on real TMDB performance data</p>
+            <p className="text-green-100">Based on real performance</p>
           </div>
           
           <div className="p-6">
@@ -248,7 +85,7 @@ function PredictionResults({ result, formData, onWhatIfAnalysis, onReset }) {
               {result.breakdown && (
                 <div className="bg-indigo-50 rounded-xl p-6">
                   <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                    📊 TMDB Analysis
+                    📊 Box Office Analysis
                   </h4>
                   <div className="space-y-3">
                     {/* TMDB Scores */}
@@ -311,7 +148,7 @@ function PredictionResults({ result, formData, onWhatIfAnalysis, onReset }) {
                   {result.dataSource && (
                     <div className="mt-4 pt-3 border-t border-indigo-200">
                       <p className="text-xs text-indigo-600 flex items-center gap-1">
-                        📡 {result.dataSource}
+                        {/* 📡 {result.dataSource} */}
                       </p>
                     </div>
                   )}
@@ -338,7 +175,7 @@ function PredictionResults({ result, formData, onWhatIfAnalysis, onReset }) {
             {/* Info Note */}
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600 bg-yellow-50 py-3 px-4 rounded-lg border border-yellow-200">
-                💡 All ratings calculated from real TMDB box office performance data - no hardcoded limitations!
+                💡 All ratings calculated from real box office performance data - no hardcoded limitations!
               </p>
             </div>
           </div>
