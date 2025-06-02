@@ -981,12 +981,12 @@ function AdminDashboard({ user, onLogout, onTokenExpired }) {
                                             </div>
                                           </div>
                                           
-                                          {/* Additional Prediction Breakdown */}
-                                          {pred.prediction?.breakdown && (
+                                          
+                                          {/* {pred.prediction?.breakdown && (
                                             <div className="mt-4 p-3 bg-gray-50 rounded-lg">
                                               <h6 className="text-xs font-medium text-gray-700 mb-2">Prediction Breakdown:</h6>
                                               <div className="grid grid-cols-2 md:grid-cols-3 gap-2 text-xs">
-                                                {/* Basic breakdown info */}
+                                                
                                                 {pred.prediction.breakdown.base_prediction && (
                                                   <div>
                                                     <span className="text-gray-500">Base Prediction:</span>
@@ -1031,7 +1031,7 @@ function AdminDashboard({ user, onLogout, onTokenExpired }) {
                                                 )}
                                               </div>
                                               
-                                              {/* Model predictions if available */}
+                                             
                                               {pred.prediction.breakdown.model_predictions && (
                                                 <div className="mt-3 pt-2 border-t border-gray-200">
                                                   <h6 className="text-xs font-medium text-gray-700 mb-2">Model Predictions:</h6>
@@ -1061,7 +1061,7 @@ function AdminDashboard({ user, onLogout, onTokenExpired }) {
                                                 </div>
                                               )}
                                               
-                                              {/* Ensemble weights if available */}
+                                             
                                               {pred.prediction.breakdown.ensemble_weights && (
                                                 <div className="mt-3 pt-2 border-t border-gray-200">
                                                   <h6 className="text-xs font-medium text-gray-700 mb-2">Model Weights:</h6>
@@ -1077,7 +1077,7 @@ function AdminDashboard({ user, onLogout, onTokenExpired }) {
                                                 </div>
                                               )}
                                             </div>
-                                          )}
+                                          )} */}
                                         </div>
                                       </div>
                                     ))}
