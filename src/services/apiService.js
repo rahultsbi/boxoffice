@@ -1760,7 +1760,7 @@
 //         }
 //     }
 // };
-export const API_BASE_URL = 'http://localhost:8001'; // Update with your backend URL
+export const API_BASE_URL = 'https://box-office-tool-backend.onrender.com'; // Update with your backend URL
 
 export const apiService = {
     // Get auth token from localStorage with fallback
